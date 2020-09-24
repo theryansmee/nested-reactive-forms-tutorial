@@ -1,0 +1,36 @@
+.button-row {
+	width: 100%;
+	padding-top: 2rem;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.button-success {
+	background: #0CCE6B;
+	padding: 0.75rem 1rem;
+	border: 1px solid darken( #0CCE6B, 5 );
+	border-radius: 0;
+	box-shadow: none;
+	cursor: pointer;
+
+	color: #fff;
+
+	&:hover,
+	&:focus {
+		background: darken( #0CCE6B, 2 );
+	}
+}
+
+.text-button {
+	background: transparent;
+	padding: 0.75rem 0;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+
+	color: #0bc466;
+
+	&:hover {
+		background: rgba( $backgroundColour, 0.05 );
+	}
+}
