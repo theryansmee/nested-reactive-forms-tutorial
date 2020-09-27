@@ -36,6 +36,7 @@
 .button-danger {
 	@extend %button;
 	background: #DB3A34;
+	padding: 0.75rem;
 	border-color: darken( #DB3A34, 5 );
 
 	color: #fff;
