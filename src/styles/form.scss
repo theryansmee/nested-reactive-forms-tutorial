@@ -11,6 +11,20 @@ input {
 	border: unset;
 }
 
+.form-row-outer-wrapper {
+	display: flex;
+}
+
+.input-section {
+	flex: 1;
+}
+
+.action-panel {
+	padding: 1rem 0 1rem 1rem;
+	display: flex;
+	align-items: center;
+}
+
 .form-row {
 	padding-bottom: 1rem;
 
