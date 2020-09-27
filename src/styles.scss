@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+$backgroundColour: rgba( #441151, 1 );
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background:
+		radial-gradient( $backgroundColour 3px, transparent 4px ),
+		radial-gradient( $backgroundColour 3px, transparent 4px ),
+		linear-gradient( lighten( $backgroundColour, 4 ) 4px, lighten( $backgroundColour, 2 ) 0),
+		linear-gradient( 45deg, transparent 74px, transparent 75px, $backgroundColour 75px, $backgroundColour 76px, transparent 77px, transparent 109px ),
+		linear-gradient( -45deg, transparent 75px, transparent 76px, $backgroundColour 76px, $backgroundColour 77px, transparent 78px, transparent 109px ),
+		#fff;
+	background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+	background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+
+	font-family: sans-serif;
+}
+
+
+// SCSS Routing
+@import "styles/normalize";
+@import "styles/text";
+@import "styles/form";
+@import "styles/button";
