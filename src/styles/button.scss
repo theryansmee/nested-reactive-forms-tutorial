@@ -14,6 +14,20 @@
 	display: flex;
 	align-items: center;
 	cursor: pointer;
+
+	&:disabled,
+	&:disabled:hover {
+		background: #efefef!important;
+		border-color: darken( #efefef, 15 );
+		cursor: not-allowed;
+
+		color: darken( #efefef, 15 );
+		font-style: italic;
+
+		.button-icon {
+			fill: darken( #efefef, 15 );
+		}
+	}
 }
 
 .button-success {
@@ -62,12 +76,25 @@
 
 	color: #0bc466;
 
-	.button-icon {
-		fill: #0bc466;
-	}
-
 	&:hover {
 		background: rgba( $backgroundColour, 0.05 );
+	}
+
+	&:disabled,
+	&:disabled:hover {
+		background: transparent;
+		cursor: not-allowed;
+
+		color: darken( #efefef, 15 );
+		font-style: italic;
+
+		.button-icon {
+			fill: darken( #efefef, 15 );
+		}
+	}
+
+	.button-icon {
+		fill: #0bc466;
 	}
 }
 
