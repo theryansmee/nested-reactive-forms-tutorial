@@ -4,7 +4,7 @@
 
 This project has been created to accompany my [Nested reactive forms in Angular tutorial](https://youtu.be/DEuTcG8DxUI) video.
 
-In the video we build a simple contacts list that allows you to add up to 3 contact items, each containing a name and email address.  
+In the video we build a simple contacts list that allows the user to add up to 3 contact items, each containing a name and email address.  
 The topics that we cover in the video are:
 - Nesting reactive forms
 - Passing form data between components
