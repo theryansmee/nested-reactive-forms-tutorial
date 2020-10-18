@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormGroup } from '@angular/forms';
+import { UserContactComponent } from './user-contact/user-contact.component';
 
 
 @Component({
@@ -8,8 +10,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserContactFormComponent implements OnInit {
 
+
+	public userContactForm: FormGroup;
+
+	get contactArray (): FormArray {
+		return this.userContactForm?.get( 'contacts' ) as FormArray;
+	}
+
+
 	constructor () { }
 
-	ngOnInit (): void { }
 
+	ngOnInit (): void {
+		this.generateUserContactForm();
+	}
+
+
+	public generateUserContactForm (): void {
+		this.userContactForm = new FormGroup({
+			contacts: new FormArray([
+				UserContactComponent.addUserContactItem( )
+			])
+		});
+	}
+
+	public addUserContactItem (): void {
+		this.contactArray?.push( UserContactComponent.addUserContactItem() );
+	}
+
+	public deleteContact ( index: number ): void {
+		this.contactArray?.removeAt( index );
+	}
+
+	public submitUserContactsForm (): void {
+		console.log( this.userContactForm.value );
+	}
 }
